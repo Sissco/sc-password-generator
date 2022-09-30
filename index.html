@@ -1,17 +1,19 @@
+<!DOCTYPE html>
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@400;800&display=swap" rel="stylesheet">
     </head>
     <body>
-        
+
         <div class="container">
             <button class="theme-btn" onclick="changeTheme()">Light</button>
             <h1>Generate a
                 <span class="title-span">random password</span>
-            </h1>  
+            </h1>
             <h6 class="subtitle">Never use an insecure password again.</h6>
             <div class="password-container">
                 <span>Choose password length</span>
@@ -20,17 +22,17 @@
                         <input type="radio" name="password-length" class="passlength-radio" id="passChar15" onclick="setPassLength()">
                         <label>15 Characters</label>
                     </div>
-                    
+
                     <div class="radio-box">
                         <input type="radio" name="password-length" class="passlength-radio" id="passChar20" onclick="setPassLength()">
-                        <label>20 Characters</label> 
+                        <label>20 Characters</label>
                     </div>
                     <div class="radio-box">
                         <input type="radio" name="password-length" class="passlength-radio" id="passChar25" onclick="setPassLength()">
-                        <label>25 Characters</label> 
+                        <label>25 Characters</label>
                     </div>
                 </div>
-                
+
                 <div class="remove-char-container">
                     <span>Remove special characters</span>
                     <div class="remove-char">
@@ -38,23 +40,23 @@
                             <input type="checkbox" name="remove-char" class="remove-chars" id="remove-symbols" onclick="removeSpecialChars()">
                             <label>Remove symbols</label>
                         </div>
-                        
+
                         <div class="char-box">
                         <input type="checkbox" name="remove-char" class="remove-chars" id="remove-nums" onclick="removeSpecialChars()">
-                            <label>Remove numbers</label> 
+                            <label>Remove numbers</label>
                         </div>
                     </div>
                 </div>
             </div>
-     
+
             <button class="generate-pass-btn" onclick="displayPass()">Generate Password</button>
-            
+
             <span class="hr"></span>
             <span class="copied-message">Copied to clipboard!</span>
             <div class="password-display">
                 <input readonly class="display display-1" onclick="copyToClipboard(this)"></input>
                 <input readonly class="display display-2" onclick="copyToClipboard(this)"></input>
-            </div>    
+            </div>
         </div>
 
         <script src="index.js"></script>
