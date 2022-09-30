@@ -13,7 +13,7 @@ const removeChars = document.getElementsByClassName("remove-chars")
 const removeSymbolsID = document.getElementById("remove-symbols")
 const removeNumbersID = document.getElementById("remove-nums")
 let lightUI = false
-let darkUI = true 
+let darkUI = true
 
 // Light & dark UI
 function lightTheme() {
@@ -30,7 +30,7 @@ function lightTheme() {
   for (let i = 0; i < passLengthRadio.length; i++) {
      passLengthRadio[i].style.border = "2px solid #2B283A"
   }
-  
+
   for (let i = 0; i < removeChars.length; i++) {
       removeChars[i].style.border = "2px solid #2B283A"
   }
@@ -52,14 +52,14 @@ function darkTheme() {
   titleSpan.style.color = "#4ADF86"
   subtitle.style.color = "#D5D4D8"
   hr.style.borderColor = "#2F3E53"
-  
+
   for (let i = 0; i < passLengthRadio.length; i++) {
      passLengthRadio[i].style.border = "2px solid #fff"
   }
   for (let i = 0; i < removeChars.length; i++) {
-      removeChars[i].style.border = "2px solid #2B283A"
+      removeChars[i].style.border = "2px solid #fff"
   }
-  
+
   passLengthDisplay.style.color = "#D5D4D8"
   passBtn.style.background = "#10B981"
   clipboardMsg.style.color = "#D5D4D8"
@@ -72,7 +72,7 @@ function darkTheme() {
 function changeTheme() {
     if (darkUI) {
         darkUI = !darkUI
-        lightTheme() 
+        lightTheme()
     } else if (lightUI) {
        lightUI = !lightUI
        darkTheme()
@@ -102,10 +102,10 @@ function removeSpecialChars() {
     if (removeNumbersID.checked) {
         charsFinal.splice(charsFinal.indexOf("0"), numbers.length)
     }
-    // console.log("Final:" + charsFinal, charsFinal.length) 
+    // console.log("Final:" + charsFinal, charsFinal.length)
 }
 
-// password generator 
+// password generator
 // generate a number character from the characters array
 function generateRandomChar() {
     let randomChar = Math.floor(Math.random() * charsFinal.length)
@@ -115,7 +115,7 @@ function generateRandomChar() {
 //generate password
 function generatePass() {
     let password = ""
-    
+
     for (let i = 0; i < passLength; i++) {
         password += generateRandomChar()
     }
@@ -149,7 +149,7 @@ function displayPass() {
     let newPass = generatePass()
     let newPass1 = generatePass()
     passDisplay.value = newPass
-    passDisplay1.value = newPass1  
+    passDisplay1.value = newPass1
 }
 
 // copy password to clipboard
@@ -158,10 +158,10 @@ function copyToClipboard(password) {
         password.select()
         document.execCommand("Copy")
             if (password.className === "display display-1") {
-                clipboardMsg.textContent = "Copied password 1 to clipboard!" 
+                clipboardMsg.textContent = "Copied password 1 to clipboard!"
             } else {
-                clipboardMsg.textContent = "Copied password 2 to clipboard!" 
+                clipboardMsg.textContent = "Copied password 2 to clipboard!"
             }
         clipboardMsg.style.display = "inline-block"
-    } 
+    }
 }
