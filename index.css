@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #1C1C1C;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+div.container {
+    border-radius: 6px;
+    width: 550px;
+    padding: 30px 50px 60px 50px;
+    background: #1F2937;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+h1 {
+    font-family: 'Karla', sans-serif;
+    font-size:40px;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+h6 {
+    color: #D5D4D8;
+    font-size: 20px;
+    margin-top: 0;
+    font-weight: 500;
+    
+}
+h1 span {
+    display: block;
+    color: #4ADF86;
+}
+
+.theme-btn { 
+    z-index: 99;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+}
+
+button {
+    cursor: pointer;
+    padding: 9px 17px;
+    border: none;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    outline: none!important;
+}
+
+.generate-pass-btn {
+    background: #10B981;
+    color: #fff;
+    font-weight: 500;
+}
+
+div.password-container{
+    color: #D5D4D8;
+    margin-bottom: 30px;
+    width: 80%;
+}
+
+div.password-container > span {
+    display: inline-block;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+.password-length span{
+    display: block;
+}
+
+.hr {
+    margin: 30px 0;
+    width:100%;
+    border-bottom: 1px solid #2F3E53;
+}
+
+div.password-length, div.remove-char  {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+}
+
+div.remove-char-container > span {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.radio-box, .char-box {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+input[type='radio'], input[type='checkbox'] {
+  box-sizing: border-box;
+  appearance: none;
+  background: white;
+  outline: none;
+  border: 2px solid #fff;
+  width: 16px;
+  height: 16px;
+}
+
+input[type='radio']:checked, input[type='checkbox']:checked {
+  background: #1F2937;
+} 
+
+.copied-message {
+    padding-bottom: 20px;
+    color: #D5D4D8;
+    display: none;
+}
+
+div.password-display {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #55F991;
+}
+
+.password-display > input {
+    display: inline-block;
+    width: 240px;
+    min-height: 16px;
+    font-weight: 500;
+    padding: 10px 10px;
+    text-align: center;
+    background: #273549;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #55F991;
+}
